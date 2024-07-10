@@ -1,0 +1,51 @@
+.navigation-buttons {
+  display: grid;
+  grid-template-areas: 
+    ". up ."
+    "left . right"
+    ". down .";
+  grid-gap: 40px; 
+  position: absolute;
+  bottom: 100px; /* Adjusted value to move the buttons higher */
+  right: 10px;
+  transition: right 0.3s ease;
+  margin-right: 30px;
+}
+
+.nav-button {
+  width: 90px;
+  height: 40px;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.nav-button img {
+  width: 100%; 
+}
+
+.nav-button.left:hover,
+.nav-button.up:hover,
+.nav-button.right:hover,
+.nav-button.down:hover {
+  transform: scale(1.1); 
+}
+
+.nav-button.left {
+  grid-area: left;
+}
+
+.nav-button.up {
+  grid-area: up;
+}
+
+.nav-button.right {
+  grid-area: right;
+}
+
+.nav-button.down {
+  grid-area: down;
+}
